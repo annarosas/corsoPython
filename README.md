@@ -1,0 +1,2 @@
+# corsoPython
+Esercizi corso python
