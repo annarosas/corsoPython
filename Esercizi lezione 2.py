@@ -5,7 +5,7 @@ try:
     eta_utente = int(raw_input('Quanti anni hai?'))
 except:
     print('Errore. Il campo età è numerico')
-    nome_utente = raw_input('Come ti chiami?')
+    eta_utente = int(raw_input('Quanti anni hai?'))
     if eta_utente >= 18:
         print('A quanto pare sei maggiorenne')
     else:
