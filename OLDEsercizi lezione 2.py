@@ -1,23 +1,31 @@
 # coding=utf-8
 # Controllo età
 nome_utente = raw_input('Come ti chiami?')
-try:
-    eta_utente = int(raw_input('Quanti anni hai?'))
-except:
-    print('Errore. Il campo età è numerico')
-    eta_utente = int(raw_input('Quanti anni hai?'))
-    if eta_utente >= 18:
-        print('A quanto pare sei maggiorenne')
-    else:
-        print('Wow sei giovane, a quanto pare sei minorenne')
+while not nome_utente:
+    nome_utente = raw_input('Come ti chiami?(questo campo è obbligatorio)')
+eta_utente = ''
+while not eta_utente:
+    try:
+        eta_utente = int(raw_input('Quanti anni hai?'))
+    except:
+        print('Errore."Quanti anni hai è un campo numerico ed è obbligatorio"')
+        eta_utente = raw_input('Quanti anni hai?')
+        while type(eta_utente) != int or not eta_utente:
+            try:
+                eta_utente = int(raw_input('Quanti anni hai?'))
+            except:
+                print('Errore."Quanti anni hai è un campo numerico ed è obbligatorio"')
 
 
+print('Ciao ' + nome_utente + ' benvenuto!')
+if eta_utente >= 18:
+    print('A quanto pare sei maggiorenne')
 else:
-    print('Ciao ' + nome_utente + ' benvenuto!')
-    if eta_utente >= 18:
-        print('A quanto pare sei maggiorenne')
-    else:
-        print('Wow sei giovane, a quanto pare sei minorenne')
+    print('Wow sei giovane, a quanto pare sei minorenne')
+
+
+
+
 
 #controllo password
 password = 'Password_sicura'
