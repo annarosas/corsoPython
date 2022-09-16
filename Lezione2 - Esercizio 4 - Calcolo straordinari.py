@@ -1,9 +1,9 @@
 # coding=utf-8
-#calcolo paga con e senza straordinari
+# calcolo paga con e senza straordinari
 ore_lavorate = ''
 while not ore_lavorate:
     try:
-        ore_lavorate = int(raw_input('Quante ore hai lavorato?'))
+        ore_lavorate = int(input('Quante ore hai lavorato?'))
     except:
         print('ore lavorate è un campo obbligatorio e numerico')
     else:
@@ -18,4 +18,5 @@ while not ore_lavorate:
             print('In totale hai guadagnato ' + str(ore_lavorate*paga_oraria) + ' euro')
         elif ore_lavorate == 40:
             print('Non hai fatto straordinari')
-            print('In totale hai guadagnato ') + str(ore_lavorate*paga_oraria) + (' euro')
+            print('In totale hai guadagnato ' + str(ore_lavorate*paga_oraria) + ' euro')
+
