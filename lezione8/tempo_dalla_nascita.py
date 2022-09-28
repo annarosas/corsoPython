@@ -1,5 +1,6 @@
+# coding=utf-8
 from datetime import date, datetime
-
+#
 oggi = (date.today()).strftime("%d/%m/%Y")
 oggi_datetime = datetime.strptime(oggi, '%d/%m/%Y')
 
