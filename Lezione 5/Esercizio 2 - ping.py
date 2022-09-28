@@ -4,3 +4,5 @@ def ping(indirizzo):
     return not os.system('ping %s -n 1' % (indirizzo,))
 
 ping('www.google.com')
+
+
