@@ -9,7 +9,7 @@ dtnascita = datetime.strptime(data_nascita, '%d/%m/%Y')
 giorni =  oggi_datetime - dtnascita
 
 
-print('Dalla tua nascita sono passati', giorni, 'giorni')
+print('Dalla tua nascita sono passati', giorni)
 
 
 
