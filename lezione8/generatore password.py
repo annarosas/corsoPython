@@ -22,7 +22,7 @@ print(password)
 #versione 2 - due opzioni semplice e complessa
 print('Benvenuto nel generatore di password')
 
-tipo = input('Vuoi una password semplice o complessa? digita "S" per semplice e "C pe complessa').lower()
+tipo = input('Vuoi una password semplice o complessa? digita "S" per semplice e "C per complessa').lower()
 semplice = 8
 complessa = 20
 numeri = string.digits
