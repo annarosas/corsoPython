@@ -31,3 +31,18 @@ print(str(chiavi))
 valori = {key: eta[key] for key in eta.keys()
           &{'carlo','maria'}
           }
+
+# Estrarre chiavi, Estrarre valori
+chiavi = list(eta.keys())
+valori = list(eta.values())
+print(chiavi)
+print(valori)
+
+#aggiungere
+eta['lia'] = '70'
+print(eta)
+
+# eliminare
+del eta['carlo']
+print(eta)
+
