@@ -35,8 +35,15 @@ file.close()
 cartella = 'esercitazione'
 if not os.path.isdir(cartella):
     os.makedirs(cartella)
+# creo un file dentro la cartella e scelgo il formato del file
+file = 'esempio' + '.doc'
+file_path = cartella +'/'+file
+with open(os.path.join(cartella, file), 'w') as temp_file:
+    temp_file.write('ciao')
 
 # Cancello la cartella ma su windows ho problema di permessi
-# PermissionError: [WinError 5] Accesso negato: 'esercitazione'
 
+
+os.remove(str(file_path))
 os.remove(cartella)
+# Se provo a rimuovere la cartella ottengo PermissionError: [WinError 5] Accesso negato: 'esercitazione'
