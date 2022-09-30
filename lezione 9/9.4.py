@@ -26,10 +26,8 @@ riga3 = file.readline()
 if len(riga1) > 0 and len(riga2) > 0 and len(riga3) > 0:
     # stampo
     print(riga1, riga2, riga3)
-
-# chiudo il file
-
 file.close()
+
 
 # creo una cartella
 cartella = 'esercitazione'
@@ -37,7 +35,7 @@ if not os.path.isdir(cartella):
     os.makedirs(cartella)
 # creo un file dentro la cartella e scelgo il formato del file
 file = 'esempio' + '.doc'
-file_path = cartella +'/'+file
+file_path = cartella + '/' +file
 with open(os.path.join(cartella, file), 'w') as temp_file:
     temp_file.write('ciao')
 
