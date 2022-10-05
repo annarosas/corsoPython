@@ -1,0 +1,5 @@
+Data: 2022-10-05 17:38:50.123105 | OPERAZIONE:Prelievo | Cifra prelevata 100  
+Data: 2022-10-05 17:39:14.708440 | OPERAZIONE:Versamento | Cifra versata 5000  
+Data: 2022-10-05 17:39:28.355995 | OPERAZIONE:Prelievo | Cifra prelevata 100  
+Data: 2022-10-05 17:40:25.484405 | OPERAZIONE:Prelievo | Cifra prelevata 100  
+Data: 2022-10-05 17:40:36.372042 | OPERAZIONE:Versamento | Cifra versata 2000  
