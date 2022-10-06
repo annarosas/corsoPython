@@ -3,3 +3,8 @@ Data: 2022-10-05 17:39:14.708440 | OPERAZIONE:Versamento | Cifra versata 5000
 Data: 2022-10-05 17:39:28.355995 | OPERAZIONE:Prelievo | Cifra prelevata 100  
 Data: 2022-10-05 17:40:25.484405 | OPERAZIONE:Prelievo | Cifra prelevata 100  
 Data: 2022-10-05 17:40:36.372042 | OPERAZIONE:Versamento | Cifra versata 2000  
+Data: 2022-10-06 09:13:32.624884 | OPERAZIONE:Prelievo | Cifra prelevata 20  
+Data: 2022-10-06 09:14:05.351111 | OPERAZIONE:Versamento | Cifra versata 2350  
+Data: 2022-10-06 09:17:34.894585 | OPERAZIONE:Prelievo | Cifra prelevata 10.4  
+Data: 2022-10-06 09:17:44.541651 | OPERAZIONE:Versamento | Cifra versata 30.0  
+Data: 2022-10-06 09:19:34.397055 | OPERAZIONE:Prelievo | Cifra prelevata 20.5  

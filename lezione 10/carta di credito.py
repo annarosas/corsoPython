@@ -28,7 +28,7 @@ class Cartacredito:
         return f'{self.credito}'
 
 # metodo prelievo
-    def prelievo(self, cifra_prelievo='0'):
+    def prelievo(self, cifra_prelievo=0):
         try:
             if cifra_prelievo <= self.credito:
                 with open('saldo.txt', 'w') as file_s:
@@ -72,7 +72,7 @@ if operazione:
     if saldo_file.is_file():
         with open("saldo.txt") as file:
             saldo_attuale = file.read()
-            saldo_attuale_int = int(saldo_attuale)
+            saldo_attuale_int = float(saldo_attuale)
             carta1 = Cartacredito('svrnrs87l63g273s', 'Anna', 'Savarino', '3020 345 1234 4335',
                                   '09', '2024', '000', saldo_attuale_int)
 
@@ -81,6 +81,7 @@ if operazione:
 # inizializzo il file operazioni
     with open('operazioni_bancomat.txt', 'a') as file:
         file.write('')
+        file.close()
 
 
 # gestisco gli esiti delle operazioni
@@ -88,7 +89,7 @@ if operazione:
 data = datetime.today()
 if operazione == 'P':
 
-    cifra_prelievo = int(input('Quanto vuoi prelevare?'))
+    cifra_prelievo = float(input('Quanto vuoi prelevare?'))
     print(carta1.prelievo(cifra_prelievo))
     with open('operazioni_bancomat.txt', 'a') as file:
         file.write(f'Data: {data} | OPERAZIONE:Prelievo | Cifra prelevata {cifra_prelievo}  \n')
@@ -96,7 +97,7 @@ if operazione == 'P':
 
 
 elif operazione == 'V':
-    cifra_versamento = int(input('Quanto vuoi versare?'))
+    cifra_versamento = float(input('Quanto vuoi versare?'))
     print(carta1.versamento(cifra_versamento))
     with open('operazioni_bancomat.txt', 'a') as file:
         file.write(f'Data: {data} | OPERAZIONE:Versamento | Cifra versata {cifra_versamento}  \n')
@@ -116,3 +117,5 @@ elif operazione == 'OP':
         last_n_lines = file.readlines()[-n_operazioni:]
         print(last_n_lines)
         file.close()
+else:
+    print('Funzione errata o non disponibile. Arrivederci.')
