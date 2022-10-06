@@ -1,4 +1,5 @@
 # genero il file
+import shutil
 import os
 import stat
 
@@ -33,6 +34,7 @@ file.close()
 cartella = 'esercitazione'
 if not os.path.isdir(cartella):
     os.makedirs(cartella)
+
 # creo un file dentro la cartella e scelgo il formato del file
 file = 'esempio' + '.doc'
 file_path = cartella + '/' +file
@@ -43,5 +45,9 @@ with open(os.path.join(cartella, file), 'w') as temp_file:
 
 
 os.remove(str(file_path))
+os.stat(cartella)
 os.remove(cartella)
+
+os.chmod('C:/Users/sviluppo/Documents/CorsoPython/corsoPython/lezione 9/esercitazione', stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR)
+shutil.rmtree('C:/Users/sviluppo/Documents/CorsoPython/corsoPython/lezione 9/esercitazione', ignore_errors=True)
 # Se provo a rimuovere la cartella ottengo PermissionError: [WinError 5] Accesso negato: 'esercitazione'
