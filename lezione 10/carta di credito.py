@@ -28,7 +28,7 @@ class Cartacredito:
         return f'{self.credito}'
 
 # metodo prelievo
-    def prelievo(self, cifra_prelievo=0):
+    def prelievo(self, cifra_prelievo = float(0)):
         try:
             if cifra_prelievo <= self.credito:
                 with open('saldo.txt', 'w') as file_s:
@@ -42,7 +42,7 @@ class Cartacredito:
                    f' EURO. Effettua un versamento.'
 # metodo versamento
     
-    def versamento(self, cifra_versamento=0):
+    def versamento(self, cifra_versamento = float(0)):
         try:
             if cifra_versamento > 0:
                 self.credito = self.credito + cifra_versamento
