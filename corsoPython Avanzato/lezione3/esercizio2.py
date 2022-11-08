@@ -21,7 +21,7 @@ while True:
         print(f'Hai inserito: {lista_lenght}')
         break
     else:
-        print('Errore, il numero inserito non è compreso tra 1 e 5')
+        print('Errore, il numero inserito non è compreso tra 1 e 15')
 
 # definisco la variabile lista e la lunghezza
 listaElementi = []
