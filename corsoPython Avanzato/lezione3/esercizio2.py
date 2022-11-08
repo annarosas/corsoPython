@@ -13,15 +13,15 @@ import random
 
 while True:
     try:
-        lista_lenght = int(input("Inserisci un numero tra compreso tra 1 e 15: "))
+        lista_lenght = int(input("Inserisci un numero tra compreso tra 5 e 15: "))
     except ValueError:
-        print("Errore. Per favore inserisci un numero tra compreso tra 1 e 15")
+        print("Errore. Per favore inserisci un numero tra compreso tra 5 e 15")
         continue
-    if lista_lenght >= 1 and lista_lenght <= 15:
+    if lista_lenght >= 5 and lista_lenght <= 15:
         print(f'Hai inserito: {lista_lenght}')
         break
     else:
-        print('Errore, il numero inserito non è compreso tra 1 e 15')
+        print('Errore, il numero inserito non è compreso tra 5 e 15')
 
 # definisco la variabile lista e la lunghezza
 listaElementi = []
