@@ -17,7 +17,7 @@ while True:
     except ValueError:
         print("Errore. Per favore inserisci un numero tra compreso tra 5 e 15")
         continue
-    if lista_lenght >= 5 and lista_lenght <= 15:
+    if 5 <= lista_lenght <= 15:
         print(f'Hai inserito: {lista_lenght}')
         break
     else:
@@ -33,9 +33,9 @@ n = 1
 print(f'Creiamo una lista di {lista_lenght} numeri')
 
 # Richiesta elementi lista all'utente
-while(True):
+while True:
     try:
-        elementi= int(input(f'Inserisci l\'elemento {n} di {lista_lenght}. '))
+        elementi = int(input(f'Inserisci l\'elemento {n} di {lista_lenght}. '))
         listaElementi.append(elementi)
         print(listaElementi)
         n = n + 1
@@ -54,39 +54,29 @@ while(True):
 copiaLista = listaElementi[:]
 
 # genero una lista di 3 numeri casuali da 0 a 100
-numbers = random.sample(range(0, 100), 3)
+new_numbers = random.sample(range(0, 100), 3)
 
 # creo un indica random per modificare tre elementi casuali della lista dell'utente
-# ovviamente non uso numbers perchè rischierei di andare fuori indice, infatti utilizzo lista_lenght per definire il range
-replace = random.sample(range(0, lista_lenght), 3)
+# ovviamente non uso numbers perchè rischierei di andare fuori indice,
+# infatti utilizzo lista_lenght per definire il range
+index_replace = random.sample(range(0, lista_lenght), 3)
 
 
 # creo la funzione che sostituisce elementi casuali della lista con 3 numeri casuali da 1 a 100
-def replaceList(nomeLista, numeri, replace):
+def replaceList(copylist, numbers, replace):
     i = 0
-    for n in numeri:
-        nomeLista[replace[i]] = numeri[i]
+    for n in numbers:
+        copylist[replace[i]] = numbers[i]
         i = i + 1
 
 
-replaceList(copiaLista, numbers, replace)
+replaceList(copiaLista, new_numbers, index_replace)
 
 print(f'La tua lista è stata modificata. \n'
       f'Questa è la lista che hai creato {listaElementi} \n'
       f'Questa è la sua copia modificata {copiaLista} \n'
-      f'Sono stati modificati gi elementi con questo indice {replace} \n'
-      f'al loro posto sono stai inseriti questi elementi {numbers}. \n'
+      f'Sono stati modificati gi elementi con questo indice {index_replace} \n'
+      f'al loro posto sono stai inseriti questi elementi {new_numbers}. \n'
       f'La somma di questa nuova lista è: ')
 
 print(sum(copiaLista))
-
-
-
-
-
-
-
-
-
-
-
